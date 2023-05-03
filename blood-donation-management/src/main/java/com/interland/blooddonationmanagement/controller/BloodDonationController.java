@@ -64,10 +64,6 @@ public class BloodDonationController {
 
 	public ResponseEntity<JSONObject> searchByPage(@RequestBody SpecReturn specs)
 			throws NumberFormatException, RecordNotFoundException {
-
-		
-		
-		System.out.println("hitteeddddd");
 		JSONObject list = bloodDonationService.searchByLimit(specs);
 
 		return new ResponseEntity<>(list, new HttpHeaders(), HttpStatus.OK);
